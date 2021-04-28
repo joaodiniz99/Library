@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="nav">
+      <h1>Library</h1>
+      <button id="newBook">NEW BOOK</button>
+    </div>
+    <div id="loading">
+      Loading...
+    </div>
+    <div class="modal" id="myModal">
+      <div class="modal-content">
+        <form id="submitForm">
+          <input type="text" placeholder="Title" id="titleInput" required/>
+          <input type="text" placeholder="Author" id="authorInput" required/>
+          <input type="number" placeholder="Pages" id="pagesInput" required/>
+          <label for="readInput">Did you read?</label>
+          <input type="checkbox" id="readInput" />
+          <button type="submit">Create</button>
+        </form>
+      </div>
+    </div>
+    <div class="books" id="content">
+      <!-- Content -->
+    </div>
+    <script src="./app.js"></script>
+    <script src="./modal.js"></script>
+  </body>
+</html>
