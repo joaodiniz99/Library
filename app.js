@@ -149,7 +149,7 @@ const addBookToLibrary = (event) => {
 
   myLibrary.push(newBook);
   saveLocal();
-  addBookToContainer(newBook);
+  addBookToContainer(newBook, myLibrary.length - 1);
 }
 
 form.onsubmit = addBookToLibrary;

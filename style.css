@@ -205,6 +205,19 @@ body {
     border-radius: 5px;
 }
 
+.modal-content form input:invalid {
+    border: 2px dashed red;
+}
+
+.modal-content form input:invalid:required {
+    background-color: black;
+    color: white;
+}
+  
+.modal-content form input:valid {
+    border: 2px solid black;
+}
+
 .modal-content form button {
     width: 60%;
     padding: 0.5rem;
