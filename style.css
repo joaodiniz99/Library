@@ -22,6 +22,7 @@ body {
     border-radius: 25px;
 
     cursor: pointer;
+    font-weight: 700;
 
     background-color: blueviolet;
     color: white;
@@ -57,7 +58,7 @@ body {
 
 .book {
     padding: 1rem 2rem;
-    max-width: 250px;
+    width: 250px;
     margin: 1rem;
 
     border-radius: 10px;
@@ -70,6 +71,9 @@ body {
 .book-title {
     margin: 0;
 
+    /* white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;  */
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.5rem;
@@ -81,11 +85,55 @@ body {
 
 .book-pages {
     font-weight: 700;
+    width: 35%;
+    display: inline-block;
 }
 
 .book-pages-span {
     border-bottom: 3px solid rgb(125, 108, 240);
 }
+
+.book-remove {
+    display: flex;
+    align-items: flex-start;
+
+    padding: 0.6rem 0.8rem;
+
+    position: relative;
+    left: 230px;
+
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+
+    background-color: rgb(197, 62, 62);
+    color: white;
+    border: 0;
+    border-radius: 55px;
+
+    transition: background-color 0.2s;
+}
+
+.book-remove:hover {
+    background-color: rgb(236, 74, 74);
+}
+
+.book-read {
+    font-size: 1.4rem;
+    border: 0;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.read {
+    background-color: rgb(42, 131, 42);
+    color: black;
+}
+
+/* .not-read {
+    background-color: rgb(255, 68, 68);
+    color: black;
+} */
 
 /*
     Loading
@@ -149,25 +197,30 @@ body {
     align-items: center;
 }
 
-.modal-content form input {
+.modal-content form input[type=text],[type=number] {
     padding: 10px;
     margin: 10px;
-
+    width: 100%;
+    
     border-radius: 5px;
 }
 
 .modal-content form button {
+    width: 60%;
     padding: 0.5rem;
     margin-top: 15px;
     border: none;
     border-radius: 20px;
     background-color: white;
-    color: blueviolet;
+    font-weight: 700;
+    color: rgb(151, 68, 228);
     cursor: pointer;
 
-    transition: transform 0.3s;
+    transition: transform 0.2s, color 0.2s, background-color 0.2s;
 }
 
 .modal-content form button:hover {
-    transform: rotateZ(360deg);
+    transform: translateY(-5px);
+    color: white;
+    background-color: rgb(151, 68, 228);
 }
