@@ -33,16 +33,16 @@ var read = document.getElementById('readInput');
 let myLibrary = [];
 
 // LocalStorage
+const saveLocal = () => {
+  localStorage.setItem('books', JSON.stringify(myLibrary));
+  // console.log('Saved to localStorage');
+}
+
 const library = localStorage.getItem('books');
 if(!library) {
   saveLocal();
 } else {
   myLibrary = JSON.parse(library);
-}
-
-const saveLocal = () => {
-  localStorage.setItem('books', JSON.stringify(myLibrary));
-  // console.log('Saved to localStorage');
 }
 
 // Class
